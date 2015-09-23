@@ -1,27 +1,34 @@
-title: Firestarter
-description: Blog about Windows and Mac
+# Site settings
+title: Firestarter - A blog about little this % little that
+email: victor.talpeanu@gmail.com
+description: A blog about little this % little that.
+url: "" # the base hostname & protocol for your site
+twitter_username: firestarterfdsk
+paginate: 3
 
-url: 
-baseurl: ""
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
+# Build settings
+markdown: kramdown
+permalink: /:title
 
-markdown: redcarpet
-highlighter: pygments
-paginate: 5
+#Default settings
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      author: Victor Talpeanu
+      layout: "post"
+      category: windows
+      comments: true
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "page"
 
-navigation:
- - title: Home
-   url: /index.html
- - title: About
-   url: /about
- - title: Contact
-   url: /contact
 
-social:
-   github: 
-   twitter: 
-   facebook: http://www.facebook.com/victor.talpeanu
-   email: victor.talpeanu@gmail.com
 
-google_analytics: "UA-67982267-1"
+
+

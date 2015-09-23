@@ -1,1 +1,0 @@
-simple blog using Long Haul theme

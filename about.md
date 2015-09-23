@@ -6,5 +6,4 @@ title: About
 <div class="post">
 	<h1 class="pageTitle">About</h1>
 	<img src="{{ '/assets/img/me.jpg' | prepend: site.baseurl }}" alt=""> 
-	<p class="intro">Long Haul is a minimal, long form <a href="http://jekyllrb.com">Jekyll</a> Theme. It can be used as is or customized to your hearts desire.</p>
-	<p>Long Haul was created in honor of all the hard working touring bicycles that have traversed the globe time and time again. Take it for a spin.</p>
+	<p class="intro">My name is Talpeanu Victor and  currently I am pursuing MCSA certification for Windows Server 2012 R2 and I hope to eventually become a System Administrator. I started this blog to provide and share valuable information about the 70-410, 70-411 and 70-412 Microsoft exam, hopefully you will find it useful.</p>

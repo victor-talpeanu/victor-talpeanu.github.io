@@ -3,9 +3,4 @@ title: Contact
 permalink: /contact/
 ---
 
-<form action="//formspree.io/your@email.com"
-      method="POST">
-    <input type="text" name="name">
-    <input type="email" name="_replyto">
-    <input type="submit" value="Send">
-</form>
+If you have questions feel free to, [send me an email](mailto:{{ site.email }}).

@@ -1,49 +1,52 @@
 ---
 layout: default
 ---
-<div class="hero is-hidden-mobile"></div>
-<div class="grid">
-  <div class="grid__col--12">
-    <ul class="post">
-      {% for post in paginator.posts %}
-        <li class="post__item">
-          <a class="post__title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          <div class="post__meta">
-            <b class="post__author">{{ post.author }}</b>
-            <b class="post__sep">•</b>
-            <b class="post__date">{{ post.date | date: "%b %-d, %Y" }}</b>
-          </div>
 
-          {{ post.excerpt }}
+<div class="home">
+  {% if site.theme.header_text %}
+  <div class="call-out" 
+  style="background-image: url('{{ site.baseurl }}/{{ site.theme.header_text_feature_image }}')">
+    {{ site.theme.header_text }}
+  </div>
+  {% endif %}
 
-          <a class="btn--default" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
-        </li>
-      {% endfor %}
-    </ul>
-    {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% else %}
-        <span>&laquo; Prev</span>
-      {% endif %}
-
-      {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-          <em>{{ page }}</em>
-        {% elsif page == 1 %}
-          <a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-        {% else %}
-          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-        {% endif %}
-      {% endfor %}
-
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-      {% else %}
-        <span>Next &raquo;</span>
-      {% endif %}
+  <div class="posts">
+    {% for post in paginator.posts %}
+    <div class="post-teaser">
+      <header>
+        <h1>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
+        </h1>
+        <p class="meta">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </p>
+      </header>
+      <div class="excerpt">
+        {{ post.excerpt }}
+        <a class="button" href="{{ post.url | prepend: site.baseurl }}">
+          {{ site.theme.str_continue_reading }}
+        </a>
+      </div>
     </div>
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      <i class="fa fa-chevron-left"></i>
+      {{ site.theme.str_prev }}
+    </a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      {{ site.theme.str_next }}
+      <i class="fa fa-chevron-right"></i>
+    </a>
     {% endif %}
   </div>
+  {% endif %}
 </div>

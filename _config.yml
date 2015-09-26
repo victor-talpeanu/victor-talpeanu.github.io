@@ -17,6 +17,8 @@ navigation:
    url: /about
  - title: Contact
    url: /contact
+ - title: Downloads
+   url: /downloads
 
 social:
    github: victor-talpeanu

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Statul si libertatea in viziune anarhista" 
+title:  "Democratie majoritarista vs. democratie consensualista" 
 date:   2015-10-08
 ---
 “ fiecare din cei care compun poporul stie foarte bine ca nu porunceste si de aceea are impresia ca democratia este o escrocherie.” Karl R. Popper

@@ -2,7 +2,6 @@
 layout: post
 title:  "Democratie majoritarista vs. democratie consensualista" 
 date:   2015-10-08
-excerpt_separator: <!--more-->
 ---
 “ fiecare din cei care compun poporul stie foarte bine ca nu porunceste si de aceea are impresia ca democratia este o escrocherie.” Karl R. Popper
 
